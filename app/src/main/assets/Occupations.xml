@@ -1,0 +1,191 @@
+<root>
+	<table main="true">
+		<name>Occupations</name>
+		<item>
+			<text>Alchemist, ladle (club), can of diesel</text>
+		</item>
+		<item>
+			<text>Mechanic, long wrench (club), car parts</text>
+		</item>
+		<item>
+			<text>Astrologer, dagger, spyglass</text>
+		</item>
+		<item>
+			<text>Blacksmith, hammer (club), metal tongs</text>
+		</item>
+		<item>
+			<text>Tanner, tongs (club), bolt of carapace</text>
+		</item>
+		<item>
+			<text>Sheriff's deputy, pistol, 10ft rope</text>
+		</item>
+		<item>
+			<text>Cobbler, awl (dagger), shoe-stretcher</text>
+		</item>
+		<item>
+			<text>Barber-surgeon, scalpel (dagger), surgery tools</text>
+		</item>
+		<item>
+			<text>Cutpurse, knife (dagger), 10$</text>
+		</item>
+		<item>
+			<text>Ditchdigger, shovel (staff), bucket of dirt</text>
+		</item>
+		<item>
+			<text>Shepard, goad (staff), herding dog</text>
+		</item>
+		<item>
+			<text>Railwayman, long hammer (club), can of black grease</text>
+		</item>
+		<item>
+			<text>Potter, claw knife (dagger), potter's wheel</text>
+		</item>
+		<item>
+			<text>Postman, pistol, official postal stamp</text>
+		</item>
+		<item>
+			<text>Lawyer, pen (dagger), law book</text>
+		</item>
+		<item>
+			<text>Water-teller, paint brush (dagger), water bowl and black ink</text>
+		</item>
+		<item>
+			<text>Gambler, pistols, dice</text>
+		</item>
+		<item>
+			<text>Tailor, scissors (dagger), bolt of bamboo rayon</text>
+		</item>
+		<item>
+			<text>Banker, pistol, pocket watch</text>
+		</item>
+		<item>
+			<text>Rag-picker, staff, bucket of junk</text>
+		</item>
+		<item>
+			<text>Gongfarmer, shovel (staff), bucket of night soil</text>
+		</item>
+		<item>
+			<text>Cremator, pitchfork (spear), collection of gold teeth</text>
+		</item>
+		<item>
+			<text>Herbalist, trowel (dagger), basket of herbs</text>
+		</item>
+		<item>
+			<text>Forester, machete (sword), bundle of bamboo</text>
+		</item>
+		<item>
+			<text>Beggar, crutch (staff), begging bowl on string</text>
+		</item>
+		<item>
+			<text>Debt slave, strigil (dagger), well-folded picture of loved one</text>
+		</item>
+		<item>
+			<text>Locksmith, knife (dagger), fine tools</text>
+		</item>
+		<item>
+			<text>Jonny/Molly, shiv (dagger), contraceptives</text>
+		</item>
+		<item>
+			<text>Minstrel, dagger, guitar or violin</text>
+		</item>
+		<item>
+			<text>Heir, fancy sword, gold ring worth 1000$</text>
+		</item>
+		<item>
+			<text>Street tough, razor (dagger), 10$</text>
+		</item>
+		<item>
+			<text>Outlaw, pistol, carapace jacket</text>
+		</item>
+		<item>
+			<text>Shaman, staff, pouch of narcotics</text>
+		</item>
+		<item>
+			<text>Bounty hunter, whip, license</text>
+		</item>
+		<item>
+			<text>Watch kid, shiv (dagger), 2$</text>
+		</item>
+		<item>
+			<text>Wainwright, club, pushcart full of wares</text>
+		</item>
+		<item>
+			<text>Weaver, knife (dagger), woven crate or barrel</text>
+		</item>
+		<item>
+			<text>Wizard's apprentice, runestaff, black grimoire</text>
+		</item>
+		<item>
+			<text>Charcoal-burner, shovel (staff), bundle of charcoal</text>
+		</item>
+		<item>
+			<text>Water-bearer, wooden yoke (club), hidden water flask</text>
+		</item>
+		<item>
+			<text>Riverman, gig-pole (staff), pole boat</text>
+		</item>
+		<item>
+			<text>Wheelman, pistol, motorbike</text>
+		</item>
+		<item>
+			<text>Mercenary, rifle, carapace jacket</text>
+		</item>
+		<item>
+			<text>Apiarist, staff, jar of honey</text>
+		</item>
+		<item>
+			<text>Butcher, cleaver (hand axe), bucket of quivering meat flesh</text>
+		</item>
+		<item>
+			<text>Cheesemonger, cudgel (staff), stinky cheese</text>
+		</item>
+		<item>
+			<text>Con artist, dagger, quality clothes</text>
+		</item>
+		<item>
+			<text>Miner, pick (club), lantern w/oil</text>
+		</item>
+		<item>
+			<text>Mushroom farmer, shovel (staff), sack of mushrooms</text>
+		</item>
+		<item>
+			<text>Rat-catcher, trident (spear), net</text>
+		</item>
+		<item>
+			<text>Mason, hammer (club), 10lbs fine stone</text>
+		</item>
+		<item>
+			<text>Sculptor, sulpting tool (dagger), 1lb clay</text>
+		</item>
+		<item>
+			<text>Glassblower, tongs (club), bag of glass beads</text>
+		</item>
+		<item>
+			<text>Navigator, bow, spyglass</text>
+		</item>
+		<item>
+			<text>Scribe, dagger, parchment and pen</text>
+		</item>
+		<item>
+			<text>Glovemaker, awl (dagger), 4 pairs gloves</text>
+		</item>
+		<item>
+			<text>Moneylender, sword, 500$</text>
+		</item>
+		<item>
+			<text>Priest, staff, 1 vial holy water</text>
+		</item>
+		<item>
+			<text>Ropemaker, knife (dagger), 100ft rope</text>
+		</item>
+		<item>
+			<text>Smuggler, sling, waterproof sack</text>
+		</item>
+		<item>
+			<text>Tax collector, pistol, 100$</text>
+		</item>
+		<item>
+			<text>Trapper, sling, uncured carapace</text>
+		</item>
+	</table>
+</root>

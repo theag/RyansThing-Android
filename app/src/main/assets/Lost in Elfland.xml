@@ -1,0 +1,143 @@
+<root>
+	<table main="true">
+		<name>Lost in Elfland</name>
+		<item>
+			<text>Captured by giants and forced to cook their hideous provender. Returned because </text>
+			<rollon>Returned because</rollon>
+			<appears>3</appears>
+		</item>
+		<item>
+			<text>Enslaved by goblins and made to perform the worst sorts of drudgery. Returned because </text>
+			<rollon>Returned because</rollon>
+			<appears>3</appears>
+		</item>
+		<item>
+			<text>Compelled by Elves to entertain them. Returned because </text>
+			<rollon>Returned because</rollon>
+			<appears>3</appears>
+		</item>
+		<item>
+			<text>Feted at Elfking's Court. Cannot forget the delights experienced. Returned because </text>
+			<rollon>Returned because</rollon>
+			<appears>4</appears>
+		</item>
+		<item>
+			<text>Performed a service and received Fey's ambiguous gratitude. Returned because </text>
+			<rollon>Returned because</rollon>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>Foolish enough to hunt a Fey-beast amid the forests of the night. Returned because </text>
+			<rollon>Returned because</rollon>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>Pursued by the Wild Hunt, and it haunts you still. Returned because </text>
+			<rollon>Returned because</rollon>
+			<appears>1</appears>
+		</item>
+		<item>
+			<text>Caught-up in a Fey War, the ferocity which still leaves you in wonder. Returned because </text>
+			<rollon>Returned because</rollon>
+			<appears>1</appears>
+		</item>
+		<item>
+			<text>Unlucky enough to fall in love with a Fey who is now lost to you. Returned because </text>
+			<rollon>Returned because</rollon>
+			<appears>1</appears>
+		</item>
+	</table>
+	<table>
+		<name>Returned because</name>
+		<item>
+			<text>they were jealous of your appearance. You lost </text>
+			<rollon>Time Lost</rollon>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>the elves thought you ugly or uncouth. You lost </text>
+			<rollon>Time Lost</rollon>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>you cast a romantic eye on the wrong person. You lost </text>
+			<rollon>Time Lost</rollon>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>you were accused of discourtesy. You lost </text>
+			<rollon>Time Lost</rollon>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>you escaped their huntsmen. You lost </text>
+			<rollon>Time Lost</rollon>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>they thought you were unappetizing. You lost </text>
+			<rollon>Time Lost</rollon>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>you hid from their mocking laughter. You lost </text>
+			<rollon>Time Lost</rollon>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>you spurned their lascivious embraces. You lost </text>
+			<rollon>Time Lost</rollon>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>you fled from their hideous slaughter. You lost </text>
+			<rollon>Time Lost</rollon>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>you requested their leave, which was eventually granted. You lost </text>
+			<rollon>Time Lost</rollon>
+			<appears>1</appears>
+		</item>
+		<item>
+			<text>the stars were right. You lost </text>
+			<rollon>Time Lost</rollon>
+			<appears>1</appears>
+		</item>
+	</table>
+	<table>
+		<name>Time Lost</name>
+		<item>
+			<dice>
+				<amount>1</amount>
+				<sides>20</sides>
+				<modifier>0</modifier>
+			</dice>
+			<unit>days of subjective time.</unit>
+		</item>
+		<item>
+			<dice>
+				<amount>1</amount>
+				<sides>20</sides>
+				<modifier>0</modifier>
+			</dice>
+			<unit>months of subjective time.</unit>
+		</item>
+		<item>
+			<dice>
+				<amount>1</amount>
+				<sides>20</sides>
+				<modifier>0</modifier>
+			</dice>
+			<unit>seasons of subjective time.</unit>
+		</item>
+		<item>
+			<dice>
+				<amount>1</amount>
+				<sides>20</sides>
+				<modifier>0</modifier>
+			</dice>
+			<unit>years of subjective time.</unit>
+		</item>
+	</table>
+</root>

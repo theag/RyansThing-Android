@@ -1,0 +1,49 @@
+<root>
+	<table main="true">
+		<name>Disease Symptoms</name>
+		<item>
+			<text>fever</text>
+		</item>
+		<item>
+			<text>chills</text>
+		</item>
+		<item>
+			<text>diarrhea</text>
+		</item>
+		<item>
+			<text>blurred vision</text>
+		</item>
+		<item>
+			<text>weakness</text>
+		</item>
+		<item>
+			<text>rash</text>
+		</item>
+		<item>
+			<text>itchiness</text>
+		</item>
+		<item>
+			<text>headache</text>
+		</item>
+		<item>
+			<text>joint aches</text>
+		</item>
+		<item>
+			<text>tenderess</text>
+		</item>
+		<item>
+			<text>depression</text>
+		</item>
+		<item>
+			<text>dizziness</text>
+		</item>
+		<item>
+			<text>coughing</text>
+		</item>
+		<item>
+			<rollon>Disease Symptoms</rollon>
+			<rollon>Disease Symptoms</rollon>
+			<appears>2</appears>
+		</item>
+	</table>
+</root>

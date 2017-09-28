@@ -1,0 +1,23 @@
+<root>
+	<table main="true">
+		<name>Wilderness Hazards</name>
+		<item>
+			<text>Encounter</text>
+		</item>
+		<item>
+			<text>Percept (regarding next encounter)</text>
+		</item>
+		<item>
+			<text>Locality (mechanical change in environment)</text>
+		</item>
+		<item>
+			<text>Percept (regarding hidden feature)</text>
+		</item>
+		<item>
+			<text>Resource exhaustion, such as a spell, etc. (without resources PCs take 1 ability damage)</text>
+		</item>
+		<item>
+			<text>Lost (Search must be used to locate a landmark before travel can be resumed)</text>
+		</item>
+	</table>
+</root>

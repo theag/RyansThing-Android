@@ -1,0 +1,84 @@
+<root>
+	<table main="true">
+		<name>Haven Hazards</name>
+		<item>
+			<text>Complication (intoduce at any point during the turn)</text>
+			<rollon>Haven Complications</rollon>
+		</item>
+		<item>
+			<text>Clue about next complication: </text>
+			<rollon>Haven Complications</rollon>
+		</item>
+		<item>
+			<text>Abatement of 1 or more (by REF whim) haven conditions</text>
+		</item>
+		<item>
+			<text>Nothing happens</text>
+			<appears>3</appears>
+		</item>
+	</table>
+	<table>
+		<name>Haven Complications</name>
+		<item>
+			<text>Assassination</text>
+		</item>
+		<item>
+			<text>PC challenged</text>
+		</item>
+		<item>
+			<text>Curse (persistant)</text>
+		</item>
+		<item>
+			<text>Earthquake</text>
+		</item>
+		<item>
+			<text>Flood</text>
+		</item>
+		<item>
+			<text>Falling star</text>
+		</item>
+		<item>
+			<text>Famine (persistant)</text>
+		</item>
+		<item>
+			<text>Fire</text>
+		</item>
+		<item>
+			<text>PC impersonation: </text>
+			<rollon>PC Impersonations</rollon>
+		</item>
+		<item>
+			<text>Inflation (persistant)</text>
+		</item>
+		<item>
+			<text>Insurrection (persistant)</text>
+		</item>
+		<item>
+			<text>Invasion (persistant)</text>
+		</item>
+		<item>
+			<text>Jailbreak</text>
+		</item>
+		<item>
+			<text>Mobilization (persistant)</text>
+		</item>
+		<item>
+			<text>Monster attack</text>
+		</item>
+		<item>
+			<text>Murderer on the loose (persistant)</text>
+		</item>
+		<item>
+			<text>Pestilence (persistant)</text>
+		</item>
+		<item>
+			<text>PC slandered</text>
+		</item>
+		<item>
+			<text>PC item stolen</text>
+		</item>
+		<item>
+			<text>Season changes</text>
+		</item>
+	</table>
+</root>

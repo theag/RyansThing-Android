@@ -1,0 +1,149 @@
+<root>
+	<table main="true">
+		<name>Trap</name>
+		<item>
+			<text>Trap: A &lt;Trap Trigger&gt; makes a &lt;Trap Object&gt; do a(n) &lt;Trap Action&gt; in order to &lt;Trap Intent&gt;</text>
+		</item>
+	</table>
+	<table>
+		<name>Trap Trigger</name>
+		<item>
+			<text>door latch</text>
+		</item>
+		<item>
+			<text>chest lid</text>
+		</item>
+		<item>
+			<text>wooden shim</text>
+		</item>
+		<item>
+			<text>trip wire</text>
+		</item>
+		<item>
+			<text>light beam</text>
+		</item>
+		<item>
+			<text>touch it</text>
+		</item>
+		<item>
+			<text>remove item</text>
+		</item>
+		<item>
+			<text>twist a feature</text>
+			<rollon>Room Features</rollon>
+		</item>
+		<item>
+			<text>pressure plate</text>
+		</item>
+		<item>
+			<rollon>Trap Trigger</rollon>
+			<rollon>Trap Trigger</rollon>
+			<appears>2</appears>
+		</item>
+	</table>
+	<table>
+		<name>Trap Object</name>
+		<item>
+			<text>pit</text>
+		</item>
+		<item>
+			<text>gas</text>
+		</item>
+		<item>
+			<text>great stone</text>
+		</item>
+		<item>
+			<text>scythe</text>
+		</item>
+		<item>
+			<text>spears</text>
+		</item>
+		<item>
+			<text>noose</text>
+		</item>
+		<item>
+			<text>net/bars</text>
+		</item>
+		<item>
+			<text>chute</text>
+		</item>
+		<item>
+			<text>darts</text>
+		</item>
+		<item>
+			<rollon>Trap Object</rollon>
+			<rollon>Trap Object</rollon>
+			<appears>2</appears>
+		</item>
+	</table>
+	<table>
+		<name>Trap Action</name>
+		<item>
+			<text>opens</text>
+		</item>
+		<item>
+			<text>fills</text>
+		</item>
+		<item>
+			<text>moves</text>
+		</item>
+		<item>
+			<text>swings</text>
+		</item>
+		<item>
+			<text>juts out</text>
+		</item>
+		<item>
+			<text>tightens</text>
+		</item>
+		<item>
+			<text>fall(s)</text>
+		</item>
+		<item>
+			<text>revealed</text>
+		</item>
+		<item>
+			<text>shoots out</text>
+		</item>
+		<item>
+			<rollon>Trap Action</rollon>
+			<rollon>Trap Action</rollon>
+			<appears>2</appears>
+		</item>
+	</table>
+	<table>
+		<name>Trap Intent</name>
+		<item>
+			<text>cripple</text>
+		</item>
+		<item>
+			<text>knock out</text>
+		</item>
+		<item>
+			<text>block</text>
+		</item>
+		<item>
+			<text>dismember</text>
+		</item>
+		<item>
+			<text>kill</text>
+		</item>
+		<item>
+			<text>tangle limb</text>
+		</item>
+		<item>
+			<text>immobilize</text>
+		</item>
+		<item>
+			<text>channel</text>
+		</item>
+		<item>
+			<text>wound</text>
+		</item>
+		<item>
+			<rollon>Trap Intent</rollon>
+			<rollon>Trap Intent</rollon>
+			<appears>2</appears>
+		</item>
+	</table>
+</root>

@@ -1,0 +1,91 @@
+<root>
+	<table main="true">
+		<name>Weapon</name><text>Weapon: </text><rollon>Item Quality</rollon><rollon>Weapons</rollon>
+	</table>
+	<table main="true">
+		<name>Armor</name><text>Armor: </text><rollon>Item Quality</rollon><rollon>Armors</rollon>
+	</table>
+	<table>
+		<name>Item Quality</name>
+		<item>
+			<text>Poor quality (x1$) </text>
+			<appears>100</appears>
+		</item>
+		<item>
+			<text>Good quality (x10$) </text>
+			<appears>10</appears>
+		</item>
+		<item>
+			<text>Master quality (x100$) </text>
+			<appears>1</appears>
+		</item>
+	</table>
+	<table>
+		<name>Weapons</name>
+		<item>
+			<text>Battleaxe</text>
+			<appears>2</appears>
+		</item>
+		<item>
+			<text>Bow</text>
+			<appears>5</appears>
+		</item>
+		<item>
+			<text>Club</text>
+			<appears>5</appears>
+		</item>
+		<item>
+			<text>Crossbow</text>
+		</item>
+		<item>
+			<text>Dagger</text>
+			<appears>10</appears>
+		</item>
+		<item>
+			<text>Greatweapon</text>
+		</item>
+		<item>
+			<text>Handaxe</text>
+			<appears>5</appears>
+		</item>
+		<item>
+			<text>Sling</text>
+			<appears>10</appears>
+		</item>
+		<item>
+			<text>Spear</text>
+			<appears>5</appears>
+		</item>
+		<item>
+			<text>Sword</text>
+			<appears>3</appears>
+		</item>
+		<item>
+			<text>Pistol</text>
+		</item>
+		<item>
+			<text>Rifle</text>
+		</item>
+		<item>
+			<text>Whip</text>
+			<appears>2</appears>
+		</item>
+	</table>
+	<table>
+		<name>Armors</name>
+		<item>
+			<text>Shield</text>
+		</item>
+		<item>
+			<text>Scale armor</text>
+		</item>
+		<item>
+			<text>Carapace jacket</text>
+			<appears>3</appears>
+		</item>
+		<item>
+			<text>Flak jacket</text>
+			<appears>4</appears>
+		</item>
+	</table>
+</root>

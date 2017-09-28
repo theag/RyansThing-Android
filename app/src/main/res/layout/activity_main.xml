@@ -10,7 +10,100 @@
     tools:context="com.ryansthing.MainActivity">
 
     <TextView
+        android:id="@+id/lblHazards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignBaseline="@+id/btnWilderness"
+        android:text="Hazards"/>
+
+    <Button
+        android:id="@+id/btnWilderness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lblHazards"
+        android:text="Wilderness"/>
+
+    <Button
+        android:id="@+id/btnDungeon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btnWilderness"
+        android:text="Dungeon"/>
+
+    <Button
+        android:id="@+id/btnHaven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btnDungeon"
+        android:text="Haven"/>
+
+    <Button
+        android:id="@+id/btnCurrentRoundTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnWilderness"
+        android:text="Current Round/Turn"/>
+
+    <Button
+        android:id="@+id/btnAddRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnWilderness"
+        android:layout_toRightOf="@+id/btnCurrentRoundTurn"
+        android:text="Add Round"/>
+
+    <Button
+        android:id="@+id/btnCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCurrentRoundTurn"
+        android:text="Current Time"/>
+
+    <Button
+        android:id="@+id/btnAddTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCurrentRoundTurn"
+        android:layout_toRightOf="@+id/btnCurrentTime"
+        android:text="Add Time"
+        android:onClick="openDialog"/>
+
+    <Button
+        android:id="@+id/btnMainTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCurrentTime"
+        android:text="Main Tables"/>
+
+    <Button
+        android:id="@+id/btnSecondaryTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCurrentTime"
+        android:layout_toRightOf="@+id/btnMainTable"
+        android:text="Secondary Tables"/>
+
+    <ListView
+        android:id="@+id/lvLog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/btnMainTable"
+        android:layout_above="@+id/btnLoadLog"></ListView>
+
+    <TextView
+        android:id="@+id/lblLog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnLoadLog"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/btnLoadLog"/>
+
+    <Button
+        android:id="@+id/btnLoadLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Load Log"/>
+
 </RelativeLayout>
