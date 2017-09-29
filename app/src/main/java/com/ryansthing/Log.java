@@ -2,7 +2,9 @@ package com.ryansthing;
 
 import android.content.Context;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -13,7 +15,7 @@ import java.util.Calendar;
  */
 public class Log {
 
-    private final String filename;
+    private String filename;
     public final ArrayList<String> data;
     private final Context context;
 
@@ -53,28 +55,23 @@ public class Log {
         filename = "log-" +getToday() +"-" +getRandom() +".txt";
     }
 
-    /*public Log(File file) {
-        data = new ArrayList<>();
-        this.file = file;
-        String text = "";
+    public void update(File file) {
+        data.clear();
+        filename = file.getName();
         try {
             BufferedReader fileIn = new BufferedReader(new FileReader(file));
             String line = fileIn.readLine();
             while(line != null) {
-                if(!text.isEmpty()) {
-                    text += "\n";
-                }
-                text += line;
+                data.add(line);
                 line = fileIn.readLine();
             }
             fileIn.close();
         } catch(IOException ex) {
             ex.printStackTrace(System.out);
             System.out.println(ex.getLocalizedMessage());
-            JOptionPane.showMessageDialog(null, "Error reading log.", "Error", JOptionPane.ERROR_MESSAGE);
+            //todo:JOptionPane.showMessageDialog(null, "Error reading log.", "Error", JOptionPane.ERROR_MESSAGE);
         }
-        txtLog.setText(text);
-    }*/
+    }
 
     public String getLabel() {
         return "Log: " +filename;
@@ -93,7 +90,7 @@ public class Log {
         } catch (IOException ex) {
             ex.printStackTrace(System.out);
             System.out.println(ex.getLocalizedMessage());
-            //JOptionPane.showMessageDialog(null, "Error saving log.", "Error", JOptionPane.ERROR_MESSAGE);
+            //todo:JOptionPane.showMessageDialog(null, "Error saving log.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -108,4 +105,7 @@ public class Log {
         return rv;
     }
 
+    public String getFilename() {
+        return filename;
+    }
 }

@@ -1,9 +1,7 @@
 <root>
 	<table main="true">
 		<name>Trap</name>
-		<item>
-			<text>Trap: A &lt;Trap Trigger&gt; makes a &lt;Trap Object&gt; do a(n) &lt;Trap Action&gt; in order to &lt;Trap Intent&gt;</text>
-		</item>
+		<text>Trap: A &lt;Trap Trigger&gt; makes a &lt;Trap Object&gt; do a(n) &lt;Trap Action&gt; in order to &lt;Trap Intent&gt;</text>
 	</table>
 	<table>
 		<name>Trap Trigger</name>

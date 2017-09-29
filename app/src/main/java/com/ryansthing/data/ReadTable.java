@@ -7,6 +7,7 @@ package com.ryansthing.data;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -27,7 +28,7 @@ public class ReadTable {
 	
 
     
-    public static void read(File file, ArrayList<Table> tables) {
+    public static void read(InputStream file, ArrayList<Table> tables) {
         if(dBuilder == null) {
             try {
                 dBuilder = dbFactory.newDocumentBuilder();
@@ -51,7 +52,7 @@ public class ReadTable {
             NodeList children;
             for(int i = 0; i < tableNodes.getLength(); i++)  {
                 ele = (Element)tableNodes.item(i);
-                newTable = new Table(ele.getElementsByTagName("name").item(0).getTextContent(), ele.hasAttribute("main") && ele.getAttribute("main").equalsIgnoreCase("true"));
+                newTable = new Table(ele.getElementsByTagName("name").item(0).getTextContent());
                 items = ele.getElementsByTagName("item");
                 for(int j = 0; j < items.getLength(); j++) {
                     ele = (Element)items.item(j);

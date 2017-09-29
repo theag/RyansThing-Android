@@ -1,22 +1,22 @@
 <root>
-	<table main="true">
-		<name>Weapon</name><text>Weapon: </text><rollon>Item Quality</rollon><rollon>Weapons</rollon>
+	<table>
+		<name>Weapons with quality</name><text>Weapon: </text><rollon>Item Quality</rollon><rollon>Weapons</rollon>
 	</table>
-	<table main="true">
-		<name>Armor</name><text>Armor: </text><rollon>Item Quality</rollon><rollon>Armors</rollon>
+	<table>
+		<name>Armor with quality</name><text>Armor: </text><rollon>Item Quality</rollon><rollon>Armors</rollon>
 	</table>
 	<table>
 		<name>Item Quality</name>
 		<item>
-			<text>Poor quality (x1$) </text>
+			<text>Poor quality (x1$)</text>
 			<appears>100</appears>
 		</item>
 		<item>
-			<text>Good quality (x10$) </text>
+			<text>Good quality (x10$)</text>
 			<appears>10</appears>
 		</item>
 		<item>
-			<text>Master quality (x100$) </text>
+			<text>Master quality (x100$)</text>
 			<appears>1</appears>
 		</item>
 	</table>

@@ -17,15 +17,13 @@ public class Table {
     private static final Random rand = new Random();
     
     public final String name;
-    public final boolean isMain;
     private final ArrayList<TableEntry> entries;
     
     private String text;
     private final ArrayList<String> rollon;
     
-    public Table(String name, boolean isMain) {
+    public Table(String name) {
         this.name = name;
-        this.isMain = isMain;
         entries = new ArrayList<>();
         rollon = new ArrayList<>();
     }

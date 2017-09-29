@@ -1,6 +1,6 @@
 <root>
 	<table main="true">
-		<name>Wilderness Hazards</name>
+		<name>Dungeon Hazards</name>
 		<item>
 			<text>Encounter</text>
 		</item>
@@ -11,13 +11,13 @@
 			<text>Locality (mechanical change in environment)</text>
 		</item>
 		<item>
-			<text>Percept (regarding hidden feature)</text>
+			<text>Fatigue (take 1 hp damage equal to level unless the next turn is spent resting)</text>
 		</item>
 		<item>
 			<text>Resource exhaustion, such as a spell, etc. (without resources PCs take 1 ability damage)</text>
 		</item>
 		<item>
-			<text>Lost (Search must be used to locate a landmark before travel can be resumed)</text>
+			<text>Light source exhaustion (1 light source is about to go out)</text>
 		</item>
 	</table>
 </root>
