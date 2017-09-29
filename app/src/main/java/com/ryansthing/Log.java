@@ -108,4 +108,13 @@ public class Log {
     public String getFilename() {
         return filename;
     }
+
+    public String makeNew() {
+        if(!data.isEmpty()) {
+            save();
+        }
+        data.clear();
+        filename = "log-" +getToday() +"-" +getRandom() +".txt";
+        return getLabel();
+    }
 }

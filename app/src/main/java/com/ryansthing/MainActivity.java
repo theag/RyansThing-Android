@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import com.ryansthing.data.*;
 
+import org.w3c.dom.Text;
+
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
@@ -58,6 +60,10 @@ public class MainActivity extends AppCompatActivity implements ListDialogFragmen
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
+            case R.id.miNew:
+                ((TextView)findViewById(R.id.lblLog)).setText(log.makeNew());
+                logAdapter.notifyDataSetChanged();
+                return true;
             case R.id.miCleanup:
                 Intent intent = new Intent(this, CleanUpActivity.class);
                 intent.putExtra(CleanUpActivity.CURRENT_LOG, log.getFilename());
@@ -65,6 +71,14 @@ public class MainActivity extends AppCompatActivity implements ListDialogFragmen
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if(!log.data.isEmpty()) {
+            log.save();
         }
     }
 
