@@ -14,11 +14,11 @@ import java.util.StringTokenizer;
 public class TableEntry {
     
     private final String text;
-    private final String rollon;
+    private final String[] rollon;
     private final Dice die;
     private final String unit;
     
-    public TableEntry(String text, String rollon, Dice die, String unit) {
+    public TableEntry(String text, String[] rollon, Dice die, String unit) {
         this.text = text;
         this.rollon = rollon;
         this.die = die;
@@ -34,10 +34,9 @@ public class TableEntry {
             if(!rv.isEmpty()) {
                 rv += " ";
             }
-            StringTokenizer tokens = new StringTokenizer(rollon, ",");
-            rv += "<" +tokens.nextToken() +"> ";
-            while(tokens.hasMoreTokens()) {
-                rv += "and <" +tokens.nextToken() +"> ";
+            rv += "<" +rollon[0] +"> ";
+            for(int i = 1; i < rollon.length; i++) {
+                rv += " <" +rollon[i] +">";
             }
         }
         if(die != null) {

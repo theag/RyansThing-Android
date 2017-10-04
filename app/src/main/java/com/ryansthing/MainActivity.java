@@ -186,7 +186,8 @@ public class MainActivity extends AppCompatActivity implements ListDialogFragmen
                 log.addText(jc.toString());
                 break;
             case "table":
-                log.addText(doRoll((Table) value));
+                Table tbl = (Table) value;
+                log.addText(tbl.name +": " +doRoll(tbl));
                 break;
             case "log":
                 log.update(new File(getFilesDir(), value.toString()));

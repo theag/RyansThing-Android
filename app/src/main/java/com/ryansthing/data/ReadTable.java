@@ -43,7 +43,7 @@ public class ReadTable {
             NodeList tableNodes = doc.getElementsByTagName("table");
             Table newTable;
             String text;
-            String rollon;
+            String[] rollon;
             int amount, sides, modifier;
             String unit;
             int appears;
@@ -64,12 +64,9 @@ public class ReadTable {
                     }
                     children = ele.getElementsByTagName("rollon");
                     if(children.getLength() > 0) {
-                        rollon = "";
+                        rollon = new String[children.getLength()];
                         for(int k = 0; k < children.getLength(); k++) {
-                            if(!rollon.isEmpty()) {
-                                rollon += ",";
-                            }
-                            rollon += children.item(k).getTextContent();
+                            rollon[k] = children.item(k).getTextContent();
                         }
                     } else {
                         rollon = null;
