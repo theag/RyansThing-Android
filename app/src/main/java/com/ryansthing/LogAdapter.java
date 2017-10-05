@@ -57,9 +57,9 @@ public class LogAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(R.layout.item_log, null);
         File f = getItem(i);
-        TextView tv = view.findViewById(R.id.lblName);
+        TextView tv = (TextView) view.findViewById(R.id.lblName);
         tv.setText(f.getName());
-        tv = view.findViewById(R.id.lblDate);
+        tv = (TextView) view.findViewById(R.id.lblDate);
         tv.setText(sdf.format(new Date(f.lastModified())));
         view.findViewById(R.id.btnDelete).setTag(f);
         return view;

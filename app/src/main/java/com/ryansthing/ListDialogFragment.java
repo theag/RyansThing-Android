@@ -55,7 +55,7 @@ public class ListDialogFragment extends DialogFragment {
                     doSearch();
                 }
             });
-            ListView lv = tablesLayout.findViewById(R.id.lvTables);
+            ListView lv = (ListView)tablesLayout.findViewById(R.id.lvTables);
             adapter = new SearchAdapter(getContext(), values);
             lv.setAdapter(adapter);
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -71,7 +71,7 @@ public class ListDialogFragment extends DialogFragment {
     }
 
     public void doSearch() {
-        TextView tv = tablesLayout.findViewById(R.id.txtSearch);
+        TextView tv = (TextView)tablesLayout.findViewById(R.id.txtSearch);
         adapter.search(tv.getText().toString().trim());
     }
 

@@ -9,85 +9,86 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ryansthing.MainActivity">
 
-    <TextView
-        android:id="@+id/lblHazards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnWilderness"
-        android:text="Hazards" />
-
-    <Button
+    <ImageButton
         android:id="@+id/btnWilderness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/lblHazards"
-        android:text="Wilderness"
+        android:src="@drawable/ic_wilderness_hazrd_24dp"
         android:onClick="rollHazard"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/btnDungeon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/btnWilderness"
-        android:text="Dungeon"
+        android:src="@drawable/ic_dungeon_hazard_24dp"
         android:onClick="rollHazard"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/btnHaven"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/btnDungeon"
-        android:text="Haven"
+        android:src="@drawable/ic_haven_hazard_24dp"
         android:onClick="rollHazard"/>
 
-    <Button
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_toRightOf="@+id/btnHaven"
+        android:layout_alignTop="@+id/btnHaven"
+        android:layout_alignBottom="@+id/btnHaven"
+        android:background="@android:color/black"/>
+
+    <ImageButton
+        android:id="@+id/btnTables"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/vLine"
+        android:src="@drawable/ic_table_24dp"
+        android:onClick="openDialog"/>
+
+    <ImageButton
         android:id="@+id/btnCurrentRoundTurn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnWilderness"
-        android:text="Current Round/Turn"
+        android:src="@drawable/ic_round_turn_24dp"
         android:onClick="logCurrent"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/btnAddRound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnWilderness"
         android:layout_toRightOf="@+id/btnCurrentRoundTurn"
-        android:text="Add Round"
+        android:src="@drawable/ic_add_round_24dp"
         android:onClick="addRound"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/btnCurrentTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnCurrentRoundTurn"
-        android:text="Current Time"
+        android:layout_toRightOf="@+id/btnAddRound"
+        android:layout_below="@+id/btnWilderness"
+        android:src="@drawable/ic_time_24dp"
         android:onClick="logCurrent"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/btnAddTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnCurrentRoundTurn"
+        android:layout_below="@+id/btnWilderness"
         android:layout_toRightOf="@+id/btnCurrentTime"
-        android:text="Add Time"
-        android:onClick="openDialog"/>
-
-    <Button
-        android:id="@+id/btnTables"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnCurrentRoundTurn"
-        android:layout_toRightOf="@+id/btnAddTime"
-        android:text="Tables"
+        android:src="@drawable/ic_add_time_24dp"
         android:onClick="openDialog"/>
 
     <ListView
         android:id="@+id/lvLog"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_below="@+id/btnTables"
+        android:layout_below="@+id/btnCurrentRoundTurn"
         android:layout_above="@+id/btnLoadLog"></ListView>
 
     <TextView

@@ -61,7 +61,7 @@ public class SearchAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(android.R.layout.simple_list_item_1, null);
-        TextView tv = view.findViewById(android.R.id.text1);
+        TextView tv = (TextView) view.findViewById(android.R.id.text1);
         tv.setText(getItem(i).toString());
         return view;
     }

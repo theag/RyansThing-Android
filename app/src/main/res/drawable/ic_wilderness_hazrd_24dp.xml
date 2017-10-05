@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="0dp"
+        android:right="24dp"
+        android:drawable="@drawable/ic_hazard_24dp"/>
+    <item
+        android:left="24dp"
+        android:right="0dp"
+        android:drawable="@drawable/ic_wilderness_24dp"/>
+</layer-list>
