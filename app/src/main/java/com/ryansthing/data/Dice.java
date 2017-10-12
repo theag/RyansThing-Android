@@ -5,13 +5,16 @@
  */
 package com.ryansthing.data;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.Random;
 
 /**
  *
  * @author nbp184
  */
-public class Dice {
+public class Dice implements Parcelable {
     
     private static final Random rand = new Random();
     
@@ -32,5 +35,35 @@ public class Dice {
         }
         return result;
     }
-    
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(amount);
+        dest.writeInt(sides);
+        dest.writeInt(modifier);
+    }
+
+    public static final Parcelable.Creator<Dice> CREATOR = new Creator<Dice>() {
+        @Override
+        public Dice createFromParcel(Parcel source) {
+            return new Dice(source);
+        }
+
+        @Override
+        public Dice[] newArray(int size) {
+            return new Dice[size];
+        }
+    };
+
+    private Dice(Parcel source) {
+        amount = source.readInt();
+        sides = source.readInt();
+        modifier = source.readInt();
+    }
+
 }
