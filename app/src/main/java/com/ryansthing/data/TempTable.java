@@ -21,7 +21,7 @@ public class TempTable implements Parcelable {
     public final ArrayList<TempEntry> entries;
 
     public TempTable() {
-        name = "New Table";
+        name = "";
         hasItems = true;
         text = null;
         rollon = new ArrayList<>();

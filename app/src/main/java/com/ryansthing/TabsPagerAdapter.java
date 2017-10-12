@@ -40,12 +40,30 @@ public class TabsPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return tables.get(position).name;
+        String title = tables.get(position).name.trim();
+        if(title.isEmpty()) {
+            title = "New Table";
+        }
+        return title;
+    }
+
+    public TempTable getTable(int position) {
+        return tables.get(position);
     }
 
     public int addTable() {
         tables.add(new TempTable());
+        notifyDataSetChanged();
         return tables.size() - 1;
+    }
+
+    public boolean removeTable(int position) {
+        if(tables.size() == 1) {
+            return false;
+        }
+        tables.remove(position);
+        notifyDataSetChanged();
+        return true;
     }
 
 }

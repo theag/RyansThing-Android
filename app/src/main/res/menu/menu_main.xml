@@ -11,4 +11,12 @@
         android:title="Clean Up"
         android:icon="@drawable/ic_bug_report_24dp"
         app:showAsAction="ifRoom"></item>
+    <item
+        android:id="@+id/miAddTableFile"
+        android:title="Add Table File"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/miEditTableFile"
+        android:title="Edit Table File"
+        app:showAsAction="never"></item>
 </menu>

@@ -22,6 +22,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements ListDialogFragment.ListDialogListener {
 
+    private static final int REQUEST_ADD_TABLE = 1;
+
     private JournalCalendar jc;
     private InitiativeTracker it;
     private Log log;
@@ -59,15 +61,20 @@ public class MainActivity extends AppCompatActivity implements ListDialogFragmen
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
         switch(item.getItemId()) {
             case R.id.miNew:
                 ((TextView)findViewById(R.id.lblLog)).setText(log.makeNew());
                 logAdapter.notifyDataSetChanged();
                 return true;
             case R.id.miCleanup:
-                Intent intent = new Intent(this, CleanUpActivity.class);
+                intent = new Intent(this, CleanUpActivity.class);
                 intent.putExtra(CleanUpActivity.CURRENT_LOG, log.getFilename());
                 startActivity(intent);
+                return true;
+            case R.id.miAddTableFile:
+                intent = new Intent(this, TablesActivity.class);
+                startActivityForResult(intent, REQUEST_ADD_TABLE);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -218,4 +225,10 @@ public class MainActivity extends AppCompatActivity implements ListDialogFragmen
         }
         return result;
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+    }
+
 }
