@@ -4,11 +4,13 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.ListViewAutoScrollHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioButton;
 
 import com.ryansthing.data.TempTable;
@@ -22,11 +24,14 @@ import com.ryansthing.data.TempTable;
  * Use the {@link TableFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TableFragment extends Fragment {
+public class TableFragment extends Fragment implements TempEntryAdapter.AdapterInteractionListener {
+
+    public static final String KEY_NAME = "com.ryansthing.tablefragment.table.name";
+    public static final String KEY_ENTRY = "com.ryansthing.tablefragment.tableentry";
+
     private static final String ARG_TABLE = "com.ryansthing.tablefragment.table";
 
     private TempTable table;
-
     private OnFragmentInteractionListener mListener;
 
     public TableFragment() {
@@ -61,12 +66,6 @@ public class TableFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_table, container, false);
         ((EditText)view.findViewById(R.id.txtName)).setText(table.name);
-        if(table.getHasItems()) {
-            //todo load items fragment
-        } else {
-            ((RadioButton)view.findViewById(R.id.rbTextRollon)).setChecked(true);
-            //todo load text-rollon fragment
-        }
         Button btn = (Button)view.findViewById(R.id.btnUpdateTab);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,19 +73,40 @@ public class TableFragment extends Fragment {
                 onButtonPressed(v.getId());
             }
         });
-        btn = (Button)view.findViewById(R.id.btnDelete);
+        btn = (Button)view.findViewById(R.id.btnDeleteTable);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onButtonPressed(v.getId());
             }
         });
+        if(table.getHasItems()) {
+            table.adapter = new TempEntryAdapter(getContext(), table.entries);
+            ((TempEntryAdapter)table.adapter).setListener(this);
+            ListView lv = (ListView)view.findViewById(R.id.lvItems);
+            lv.setAdapter(table.adapter);
+            view.findViewById(R.id.btnAddItem).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onButtonPressed(v.getId());
+                }
+            });
+        } else {
+            ((RadioButton)view.findViewById(R.id.rbTextRollon)).setChecked(true);
+            //todo
+        }
         return view;
     }
 
     public void onButtonPressed(int id) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(id);
+        if(mListener != null) {
+            Bundle data = null;
+            if(id == R.id.btnUpdateTab) {
+                data = new Bundle();
+                EditText et = (EditText)getView().findViewById(R.id.txtName);
+                data.putString(KEY_NAME, et.getText().toString().trim());
+            }
+            mListener.onFragmentInteraction(id, data);
         }
     }
 
@@ -107,6 +127,28 @@ public class TableFragment extends Fragment {
         mListener = null;
     }
 
+    public int getTableTag() {
+        return table.tag;
+    }
+
+    //TempEntryAdapter.AdapterInteractionListener
+    @Override
+    public void buttonPressed(int position, int id) {
+        switch(id) {
+            case R.id.loItemListEditDelete:
+                if(mListener != null) {
+                    Bundle data = new Bundle();
+                    data.putInt(KEY_ENTRY, position);
+                    mListener.onFragmentInteraction(id, data);
+                }
+                break;
+            case R.id.btnDelete:
+                table.entries.remove(position);
+                table.adapter.notifyDataSetChanged();
+                break;
+        }
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -118,6 +160,6 @@ public class TableFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        void onFragmentInteraction(int id);
+        void onFragmentInteraction(int id, Bundle data);
     }
 }

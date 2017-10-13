@@ -57,15 +57,64 @@
 
         </RadioGroup>
 
-        <FrameLayout
-            android:id="@+id/loFrag"
+        <ListView
+            android:id="@+id/lvItems"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_below="@+id/rgType"
-            android:layout_above="@+id/btnDelete"></FrameLayout>
+            android:layout_above="@+id/btnDeleteTable"></ListView>
+
+        <ImageButton
+            android:id="@+id/btnAddItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AppTheme.FloatingButton"
+            android:layout_alignBottom="@+id/lvItems"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_add_black_24dp"/>
+
+        <RelativeLayout
+            android:id="@+id/loTextRollon"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/rgType"
+            android:layout_above="@+id/btnDeleteTable"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/chkText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/txtText"
+                android:text="text"/>
+
+            <EditText
+                android:id="@+id/txtText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/chkText"
+                android:layout_alignParentRight="true"/>
+
+            <ListView
+                android:id="@+id/lvRollon"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/txtText"
+                android:layout_alignParentBottom="true"></ListView>
+
+            <ImageButton
+                android:id="@+id/btnAddRollon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.FloatingButton"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_add_black_24dp"/>
+
+        </RelativeLayout>
 
         <Button
-            android:id="@+id/btnDelete"
+            android:id="@+id/btnDeleteTable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

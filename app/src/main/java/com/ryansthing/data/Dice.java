@@ -66,4 +66,15 @@ public class Dice implements Parcelable {
         modifier = source.readInt();
     }
 
+    public int getAmount() {
+        return amount;
+    }
+
+    public int getSides() {
+        return sides;
+    }
+
+    public int getModifier() {
+        return modifier;
+    }
 }

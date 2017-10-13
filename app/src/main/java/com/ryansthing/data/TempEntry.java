@@ -38,13 +38,22 @@ public class TempEntry implements Parcelable {
             }
         }
         if(die != null) {
-            rv += die.roll() + " ";
+            if(!rv.isEmpty()) {
+                rv += " ";
+            }
+            rv += "<" +die.getAmount() +"d" +die.getSides() +"+" +die.getModifier()+">";
         }
         if(unit != null) {
+            if(!rv.isEmpty()) {
+                rv += " ";
+            }
             rv += unit;
         }
         if(appears > 1) {
-            rv += " (" +appears +")";
+            if(!rv.isEmpty()) {
+                rv += " ";
+            }
+            rv += "(" +appears +")";
         }
         return rv;
     }
@@ -82,6 +91,9 @@ public class TempEntry implements Parcelable {
         appears = source.readInt();
         rollon = new ArrayList<>();
         source.readStringList(rollon);
+        if(rollon.isEmpty()) {
+            rollon = null;
+        }
     }
 
 }

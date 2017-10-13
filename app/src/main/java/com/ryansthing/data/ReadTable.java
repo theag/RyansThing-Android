@@ -114,7 +114,7 @@ public class ReadTable {
         
     }
 
-    public static void readTemp(InputStream file, ArrayList<TempTable> tables) {
+    public static int readTemp(InputStream file, ArrayList<TempTable> tables, int nextTag) {
         if(dBuilder == null) {
             try {
                 dBuilder = dbFactory.newDocumentBuilder();
@@ -138,7 +138,7 @@ public class ReadTable {
             NodeList children;
             for(int i = 0; i < tableNodes.getLength(); i++)  {
                 ele = (Element)tableNodes.item(i);
-                newTable = new TempTable();
+                newTable = new TempTable(nextTag++);
                 newTable.name = ele.getElementsByTagName("name").item(0).getTextContent();
                 items = ele.getElementsByTagName("item");
                 for(int j = 0; j < items.getLength(); j++) {
@@ -200,7 +200,7 @@ public class ReadTable {
             System.out.println(ex.getLocalizedMessage());
             throw new RuntimeException("ERROR");
         }
-
+        return nextTag;
     }
     
 }

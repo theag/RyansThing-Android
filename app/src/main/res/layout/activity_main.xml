@@ -39,7 +39,7 @@
         android:layout_toRightOf="@+id/btnHaven"
         android:layout_alignTop="@+id/btnHaven"
         android:layout_alignBottom="@+id/btnHaven"
-        android:background="@android:color/black"/>
+        android:background="@color/colorAccentDark"/>
 
     <ImageButton
         android:id="@+id/btnTables"

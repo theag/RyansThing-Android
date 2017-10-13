@@ -1,8 +1,12 @@
 package com.ryansthing.data;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.widget.BaseAdapter;
+
+import com.ryansthing.TempEntryAdapter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,13 +18,16 @@ import java.util.Collections;
 
 public class TempTable implements Parcelable {
 
+    public final int tag;
     public String name;
     private boolean hasItems;
     public String text;
     public final ArrayList<String> rollon;
     public final ArrayList<TempEntry> entries;
+    public BaseAdapter adapter;
 
-    public TempTable() {
+    public TempTable(int tag) {
+        this.tag = tag;
         name = "";
         hasItems = true;
         text = null;
@@ -74,6 +81,7 @@ public class TempTable implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(tag);
         dest.writeString(name);
         if(hasItems) {
             dest.writeByte((byte)1);
@@ -100,6 +108,7 @@ public class TempTable implements Parcelable {
     private TempTable(Parcel source) {
         rollon = new ArrayList<>();
         entries = new ArrayList<>();
+        tag = source.readInt();
         name = source.readString();
         hasItems = source.readByte() == 1;
         if(hasItems) {

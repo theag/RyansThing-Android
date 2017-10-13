@@ -7,6 +7,22 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+        <item name="imageButtonStyle">@style/AppTheme.ImageButton</item>
+    </style>
+
+    <style name="AppTheme.ImageButton" parent="@style/Widget.AppCompat.ImageButton">
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:tint">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.ImageButton.Borderless" parent="@style/Widget.AppCompat.ImageButton">
+        <item name="android:tint">@color/colorAccent</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.FloatingButton" parent="@style/Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/floating_action</item>
+        <item name="android:tint">@android:color/white</item>
     </style>
 
 </resources>

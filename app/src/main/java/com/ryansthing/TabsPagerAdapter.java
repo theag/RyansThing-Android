@@ -17,20 +17,33 @@ import java.util.ArrayList;
 public class TabsPagerAdapter extends FragmentStatePagerAdapter {
 
     private ArrayList<TempTable> tables;
+    private int nextTag;
 
     public TabsPagerAdapter(FragmentManager fragmentManager, InputStream file) {
         super(fragmentManager);
         tables = new ArrayList<>();
+        nextTag = 0;
         if(file != null) {
-            ReadTable.readTemp(file, tables);
+            nextTag = ReadTable.readTemp(file, tables, nextTag);
         } else {
-            tables.add(new TempTable());
+            tables.add(new TempTable(nextTag++));
         }
     }
 
     @Override
     public Fragment getItem(int position) {
         return TableFragment.newInstance(tables.get(position));
+    }
+
+    @Override
+    public int getItemPosition(Object object) {
+        TableFragment frag = (TableFragment)object;
+        for(int i = 0; i < tables.size(); i++) {
+            if(frag.getTableTag() == tables.get(i).tag) {
+                return i;
+            }
+        }
+        return POSITION_NONE;
     }
 
     @Override
@@ -52,7 +65,7 @@ public class TabsPagerAdapter extends FragmentStatePagerAdapter {
     }
 
     public int addTable() {
-        tables.add(new TempTable());
+        tables.add(new TempTable(nextTag++));
         notifyDataSetChanged();
         return tables.size() - 1;
     }
